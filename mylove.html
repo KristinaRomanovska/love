@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Для моєї коханої ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    h1 {
+      color: #fff;
+      text-shadow: 2px 2px #f48fb1;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #heart {
+      font-size: 100px;
+      animation: beat 1s infinite alternate;
+    }
+
+    @keyframes beat {
+      from { transform: scale(1); }
+      to { transform: scale(1.2); }
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      background-color: #ff6f91;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    button:hover {
+      background-color: #ff4e71;
+    }
+
+    #compliment {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #fff;
+      text-align: center;
+      max-width: 90%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Для найчарівнішої дівчини 💕</h1>
+  <div id="heart">❤️</div>
+  <button onclick="showCompliment()">Отримати комплімент</button>
+  <div id="compliment"></div>
+
+  <script>
+    const compliments = [
+      "Ти неймовірна і особлива 🌸",
+      "Твоя усмішка здатна освітити весь світ 🌞",
+      "Ти найцінніший скарб у моєму житті 💎",
+      "З тобою кожен день стає кращим 🌈",
+      "Твоє серце сповнене доброти ❤️",
+      "Ти наймиліша у всесвіті 🌟",
+      "Твої очі — мов зірки в нічному небі ✨",
+      "Я захоплююсь тобою кожну мить 🌹"
+    ];
+
+    function showCompliment() {
+      const randomIndex = Math.floor(Math.random() * compliments.length);
+      const compliment = compliments[randomIndex];
+      document.getElementById('compliment').innerText = compliment;
+    }
+  </script>
+</body>
+</html>
